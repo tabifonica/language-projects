@@ -1,0 +1,30 @@
+h1{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+}
+body {
+    background-color: blanchedalmond;
+}
+#vertical {
+    /* A flexbox with the main axis as vertical to space the items vertically along the page */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 50vh; /* 50% of "viewport height" (the screen) */
+}
+#options {
+    /* the flexbox for the options button */
+    display: flex inline;
+    padding-inline: 20vh;
+    justify-content: space-evenly;
+}
+#options button {
+    /* the options buttons*/
+    width: 25vh;
+    height: 25vh;
+    background-color: teal;
+    border-color: darkcyan;
+    color: white;
+    font-size: 72px;
+}
