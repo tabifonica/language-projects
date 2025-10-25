@@ -1,6 +1,6 @@
 from pyscript import document
 
-from Khmer_phonetics.alphabet import KhmerAlphabet
+from alphabet import KhmerAlphabet
 
 def main():
     """
