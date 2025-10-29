@@ -1,4 +1,4 @@
-import random
+import random, time
 from enum import IntEnum
 
 from pyscript.web import page, when
@@ -21,7 +21,7 @@ def set_options():
     option2 = page["#option2"]
 
     # select random choices for the buttons
-    choices = A.choose(param=2, value=1)
+    choices = A.choose("Aspirated")
     flip = [Correctness.Incorrect, Correctness.Correct] # choices[1] is correct, before shuffling
     random.shuffle(flip)
 
@@ -37,17 +37,69 @@ def submit(event):
     """
     When on of the option buttons is clicked
     """
-    # get button's "Correct" or "Incorrect" class
+    # get button
     button = event.target
-    print("Button clicked", button.id)
-    correctness = button.classList
+    button = page[f"#{button.id}"]
+
+    # if button has been clickd before, do nothing
+    if "unclickable" in button.classes:
+        print("Button unclickable")
+        return
+
+    # get other button
+    if button.id[0] == "option1":
+        other_button_id = "option2"
+    else:
+        other_button_id = "option1"
+    other_button = page[f"#{other_button_id}"]
+
+    # make both buttons unclickable
+    button.classes.add("unclickable")
+    other_button.classes.add("unclickable")
+
+    # get button's "Correct" or "Incorrect" class
+    mark = page["#mark"]
+    if "Correct" in button.classes:
+        correctness = "Correct"
+        button.classes.remove("Correct")
+    else:
+        correctness = "Incorrect"
+        button.classes.remove("Incorrect")
 
     # display mark
-    mark = page["#mark"]
-    mark.classList = "" # remove existing classes
     mark.classes.add(correctness) # add class for CSS
     mark.innerHTML = f"{correctness}!"
     print("Mark:", correctness)
+
+    # display next
+    nextbox = page["#nextbox"]
+    if "hidden" in nextbox.classes:
+        nextbox.classes.remove("hidden")
+
+def reset(event):
+    """
+    Show the next question
+    """
+    button = event.target
+    print("Button clicked:", button.id)
+
+    # hide mark
+    mark = page["#mark"]
+    mark.innerHTML = ""
+
+    # hide nextbox
+    nextbox = page["#nextbox"]
+    nextbox.classes.add("hidden")
+
+    # clear classes
+    option1 = page["#option1"]
+    option2 = page["#option2"]
+    option1.classList = ""
+    option2.classList = ""
+    mark.classList = ""
+
+    # choose a new set of options
+    set_options()
 
 # ON PAGE LOAD
 A = KhmerAlphabet() # load the Khmer alphabet once

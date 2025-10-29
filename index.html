@@ -13,11 +13,15 @@
     <py-config src="pyscript.json"></py-config>
     <py-script src="./Khmer_phonetics/Khmer_stops_game_pyscript.py"></py-script>
     <div id="vertical">
+      <p>Which of these Khmer letters represents an aspirated sound?</p>
       <div id="options">
         <button id="option1" py-click="submit" ></button>
         <button id="option2" py-click="submit" ></button>
       </div>
       <p id="mark"></p>
+      <div id="nextbox" class="hidden">
+        <button id="next" py-click="reset">Next Question</button>
+      </div>
     </div>
   </body>
 </html>

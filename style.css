@@ -6,18 +6,27 @@ h1 {
 body {
     background-color: blanchedalmond;
 }
+.hidden {
+  visibility: hidden;
+}
 #vertical {
     /* A flexbox with the main axis as vertical to space the items vertically along the page */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    min-height: 50vh; /* 50% of "viewport height" (the screen) */
+    min-height: 80vh; /* 50% of "viewport height" (the screen) */
+
+    /* text settings for items */
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Montserrat', sans-serif;
 }
 #options {
     /* the flexbox for the options button */
     display: flex;
     padding-inline: 40vh;
     justify-content: space-evenly;
+    padding: 1em;
 }
 #options button {
     /* the options buttons*/
@@ -28,10 +37,14 @@ body {
     color: white;
     font-size: 72px;
 }
-#mark {
-    text-align: center;
-    font-size: 32px;
+#nextbox {
+    padding: 1em;
+}
+#next {
     font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+}
+#mark {
     height: 1em; /* a height of one line (even when not displaying) */
 }
 #mark.Correct {
