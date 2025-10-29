@@ -4,17 +4,25 @@ h1 {
     font-size: 48px;
 }
 body {
-    background-color: blanchedalmond;
+    background-color: whitesmoke;
 }
 .hidden {
-  visibility: hidden;
+    visibility: hidden;
+}
+.dropdown {
+    height: 1em;
+    background-color: pink;
+}
+#dropdownbox {
+    display: flex;
+    justify-content: center;
 }
 #vertical {
     /* A flexbox with the main axis as vertical to space the items vertically along the page */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    min-height: 80vh; /* 50% of "viewport height" (the screen) */
+    min-height: 80vh; /* 50% oåf "viewport height" (the screen) */
 
     /* text settings for items */
     text-align: center;
