@@ -1,4 +1,4 @@
-h1{
+h1 {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 48px;
@@ -15,8 +15,8 @@ body {
 }
 #options {
     /* the flexbox for the options button */
-    display: flex inline;
-    padding-inline: 20vh;
+    display: flex;
+    padding-inline: 40vh;
     justify-content: space-evenly;
 }
 #options button {
@@ -27,4 +27,16 @@ body {
     border-color: darkcyan;
     color: white;
     font-size: 72px;
+}
+#mark {
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Montserrat', sans-serif;
+    height: 1em; /* a height of one line (even when not displaying) */
+}
+#mark.Correct {
+    color: green;
+}
+#mark.Incorrect {
+    color: red;
 }
