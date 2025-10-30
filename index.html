@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Khmer Phonetics Game</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.8.1/core.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <script type="module" src="https://pyscript.net/releases/2025.8.1/core.js"></script>
+    <link rel="stylesheet" href="style.css">  
+</head>
+  <body>
+    <h1>Khmer Phonetics Game</h1>
+    <py-config src="pyscript.json"></py-config>
+    <py-script src="./Khmer_phonetics/Khmer_stops_game_pyscript.py"></py-script>
+    <div id="vertical">
+      <div id="dropdownbox">
+        <div class="dropdown"></div>
+      </div>
+      <p>Which of these Khmer letters represents an aspirated sound?</p>
+      <div id="options">
+        <button id="option1" py-click="submit" ></button>
+        <button id="option2" py-click="submit" ></button>
+      </div>
+      <p id="mark"></p>
+      <div id="nextbox" class="hidden">
+        <button id="next" py-click="reset">Next Question</button>
+      </div>
+    </div>
+  </body>
+</html>
