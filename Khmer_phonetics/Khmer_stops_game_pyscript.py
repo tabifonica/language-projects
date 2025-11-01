@@ -12,6 +12,16 @@ class Correctness(IntEnum):
     Incorrect = 0
     Correct = 1
 
+def make_ready():
+    """
+    When the page loads, hide the loading text and show the content
+    """
+    loadingbox = page["#loadingbox"]
+    loadingbox.classes.add("loaded")
+
+    vertical = page["#vertical"]
+    vertical.classes.remove("loading")
+
 def set_options():
     """
     Select two letters from the Khmer alphabet for the option buttons
@@ -61,10 +71,8 @@ def submit(event):
     mark = page["#mark"]
     if "Correct" in button.classes:
         correctness = "Correct"
-        button.classes.remove("Correct")
     else:
         correctness = "Incorrect"
-        button.classes.remove("Incorrect")
 
     # display mark
     mark.classes.add(correctness) # add class for CSS
@@ -103,4 +111,5 @@ def reset(event):
 
 # ON PAGE LOAD
 A = KhmerAlphabet() # load the Khmer alphabet once
+make_ready() # hide loading, show content
 set_options() # set the option buttons

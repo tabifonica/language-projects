@@ -5,6 +5,11 @@ h1 {
 }
 body {
     background-color: whitesmoke;
+
+    /* text settings for items */
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Montserrat', sans-serif;
 }
 .hidden {
     visibility: hidden;
@@ -17,17 +22,24 @@ body {
     display: flex;
     justify-content: center;
 }
+#loadingbox.loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+}
+#loadingbox.loaded {
+    display: none;
+}
 #vertical {
     /* A flexbox with the main axis as vertical to space the items vertically along the page */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     min-height: 80vh; /* 50% oåf "viewport height" (the screen) */
-
-    /* text settings for items */
-    text-align: center;
-    font-size: 32px;
-    font-family: 'Montserrat', sans-serif;
+}
+#vertical.loading {
+    display: none;
 }
 #options {
     /* the flexbox for the options button */
@@ -49,7 +61,6 @@ body {
     padding: 1em;
 }
 #next {
-    font-family: 'Montserrat', sans-serif;
     font-size: 32px;
 }
 #mark {

@@ -10,16 +10,34 @@
 </head>
   <body>
     <h1>Khmer Phonetics Game</h1>
+    <div id="loadingbox" class="loading">
+      <p id="loadingText">Loading</p>
+    </div>
+    <script>
+      // add full stops to loading text
+      const text = document.getElementById("loadingText");
+      let dots = 0;
+      const interval = setInterval(() => {
+        dots++;
+        text.textContent = "Loading" + ".".repeat(dots);
+      }, 500);
+
+      // make the animation stop when the page loads
+      addEventListener("py:ready", () => {
+        clearInterval(interval);
+      });
+    </script>
+
     <py-config src="pyscript.json"></py-config>
     <py-script src="./Khmer_phonetics/Khmer_stops_game_pyscript.py"></py-script>
-    <div id="vertical">
+    <div id="vertical" class="loading">
       <div id="dropdownbox">
         <div class="dropdown"></div>
       </div>
       <p>Which of these Khmer letters represents an aspirated sound?</p>
       <div id="options">
-        <button id="option1" py-click="submit" ></button>
-        <button id="option2" py-click="submit" ></button>
+        <button id="option1" py-click="submit"></button>
+        <button id="option2" py-click="submit"></button>
       </div>
       <p id="mark"></p>
       <div id="nextbox" class="hidden">
