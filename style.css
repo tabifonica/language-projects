@@ -15,8 +15,9 @@ body {
     visibility: hidden;
 }
 .dropdown {
-    height: 1em;
-    background-color: pink;
+    height: 1rem;
+    width: 4rem;
+    background-color: red;
 }
 #dropdownbox {
     display: flex;
