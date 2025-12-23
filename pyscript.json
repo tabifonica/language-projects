@@ -1,5 +1,5 @@
 {
-    "packages": ["numpy", "ipython"],
+    "packages": ["numpy"],
     "files": {
         "./Khmer_phonetics/alphabet.py": "./alphabet.py"
     }
