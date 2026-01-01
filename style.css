@@ -19,6 +19,32 @@ body {
     width: 4rem;
     background-color: red;
 }
+.btn {
+    border: solid;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    width: 500px;
+
+    /* Remove the 'a' tag text */
+    text-decoration: none;
+}
+.vertical {
+    /* A flexbox with the main axis as vertical to space the items vertically along the page */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 25vh; /* 25% of "viewport height" (the screen) */
+}
+.vertical.loading {
+    display: none;
+}
+.horizontal{
+    /* A flexbox to align items horizontally */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 #dropdownbox {
     display: flex;
     justify-content: center;
@@ -30,16 +56,6 @@ body {
     height: 80vh;
 }
 #loadingbox.loaded {
-    display: none;
-}
-#vertical {
-    /* A flexbox with the main axis as vertical to space the items vertically along the page */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    min-height: 80vh; /* 50% oåf "viewport height" (the screen) */
-}
-#vertical.loading {
     display: none;
 }
 #options {
