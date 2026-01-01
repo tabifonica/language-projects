@@ -1,48 +1,12 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Khmer Phonetics Game</title>
+<head>
     <link rel="stylesheet" href="https://pyscript.net/releases/2025.8.1/core.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <script type="module" src="https://pyscript.net/releases/2025.8.1/core.js"></script>
-    <link rel="stylesheet" href="style.css">  
+    <link rel="stylesheet" href="style.css">
 </head>
-  <body>
-    <h1>Khmer Phonetics Game</h1>
-    <div id="loadingbox" class="loading">
-      <p id="loadingText">Loading</p>
-    </div>
-    <script>
-      // add full stops to loading text
-      const text = document.getElementById("loadingText");
-      let dots = 0;
-      const interval = setInterval(() => {
-        dots++;
-        text.textContent = "Loading" + ".".repeat(dots);
-      }, 500);
-
-      // make the animation stop when the page loads
-      addEventListener("py:ready", () => {
-        clearInterval(interval);
-      });
-    </script>
-
-    <py-config src="pyscript.json"></py-config>
-    <py-script src="./Khmer_phonetics/Khmer_stops_game_pyscript.py"></py-script>
-    <div id="vertical" class="loading">
-      <div id="dropdownbox">
-        <div class="dropdown"></div>
-      </div>
-      <p>Which of these Khmer letters represents an aspirated sound?</p>
-      <div id="options">
-        <button id="option1" py-click="submit"></button>
-        <button id="option2" py-click="submit"></button>
-      </div>
-      <p id="mark"></p>
-      <div id="nextbox" class="hidden">
-        <button id="next" py-click="reset">Next Question</button>
-      </div>
-    </div>
-  </body>
+<body>
+  <h1>Language Projects</h1>
+  <a href="Khmer_phonetics/khmer_phonetics.html" class="btn">Khmer Phonetics Game</a>
+</body>
 </html>
