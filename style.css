@@ -19,8 +19,9 @@ body {
     width: 4rem;
     background-color: red;
 }
-.btn {
+.link_btn {
     border: solid;
+    color: inherit;
     padding: 20px;
     border-radius: 8px;
     background-color: white;
