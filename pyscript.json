@@ -1,6 +1,7 @@
 {
     "packages": ["numpy"],
     "files": {
-        "./Khmer_phonetics/alphabet.py": "./alphabet.py"
+        "./Khmer_phonetics/alphabet.py": "./alphabet.py",
+        "./Bangla_conjugation/bangla_verbs.csv": "./bangla_verbs.csv"
     }
 }
