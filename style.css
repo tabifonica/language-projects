@@ -104,10 +104,13 @@ body {
 #mark.Incorrect {
     color: red;
 }
+#bangla_table {
+    height:75vh;
+}
 #bangla_table input{
     text-align: center;
     font-size: x-large;
     box-sizing: border-box;
-    width: 100%;
+    width: 80%;
     max-width: 100%;
 }

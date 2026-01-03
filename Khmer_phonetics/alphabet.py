@@ -40,7 +40,7 @@ class KhmerAlphabet():
     """
     def __init__(self):
         """
-        Populate the Khmer alphabets, annotates them with their features.
+        Populate the Khmer consonants, annotates them with their features.
         """
         self.K = np.zeros((25, 4), dtype=int) # shape of the Khmer alphabet
         row = 0                         # row of the Khmer alphabet
