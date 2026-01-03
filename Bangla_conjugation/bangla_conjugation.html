@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bangla Alphabet Game</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.8.1/core.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <script type="module" src="https://pyscript.net/releases/2025.8.1/core.js"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+  <body>
+    <h1>Bangla Alphabet Game</h1>
+    <div id="loadingbox" class="loading">
+      <p id="loadingText">Loading</p>
+    </div>
+    <script>
+      // add full stops to loading text
+      const text = document.getElementById("loadingText");
+      let dots = 0;
+      const interval = setInterval(() => {
+        dots++;
+        text.textContent = "Loading" + ".".repeat(dots);
+      }, 500);
+
+      // make the animation stop when the page loads
+      addEventListener("py:ready", () => {
+        clearInterval(interval);
+      });
+    </script>
+
+    <py-config src="../pyscript.json"></py-config>
+    <py-script src="Bangla_conjugation.py"></py-script>
+    <div id="vertical" class="vertical loading">
+      <table id="bangla_table">
+        <thead>
+          <tr>
+            <th>Tense</th>
+            <th>
+              <span class="grammar_heading">1st person</span> <br />
+              <span>আমি</span>
+            </th>
+            <th>
+              <span class="grammar_heading">2nd person <br /> informal</span> <br />
+              <span>তুমি</span></th>
+            <th>
+              <span class="grammar_heading">2nd person <br /> familiar</span> <br />
+              <span>তুই</span>
+            </th>
+            <th>
+              <span class="grammar_heading">3rd person <br /> informal</span> <br />
+              <span>সে</span>
+            </th>
+            <th>
+              <span class="grammar_heading">2nd/3rd person <br /> formal</span> <br />
+              <span>আপনি/তারা</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="grammar_heading">Present</th>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+          </tr>
+          <tr>
+            <th class="grammar_heading">Present Continuous</th>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+          </tr>
+          <tr>
+            <th class="grammar_heading">Present Perfect</th>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+          </tr>
+          <tr>
+            <th class="grammar_heading">Past</th>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+          </tr>
+          <tr>
+            <th class="grammar_heading">Past Continuous</th>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+          </tr>
+          <tr>
+            <th class="grammar_heading">Past Perfect</th>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+          </tr>
+          <tr>
+            <th class="grammar_heading">Past Habitual</th>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+          </tr>
+          <tr>
+            <th class="grammar_heading">Future</th>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+          <tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

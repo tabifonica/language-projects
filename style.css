@@ -9,7 +9,9 @@ h2 {
     font-size: 24px;
 }
 body {
+    /* global settings for all pages */
     background-color: whitesmoke;
+    margin: 3rem;
 
     /* text settings for items */
     text-align: center;
@@ -42,7 +44,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    min-height: 25vh; /* 25% of "viewport height" (the screen) */
+    min-height: 50vh; /* 25% of "viewport height" (the screen) */
 }
 .vertical.loading {
     display: none;
@@ -52,6 +54,11 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+.grammar_heading{
+    /* A heading for grammatical information in a table */
+    text-transform: uppercase;
+    font-size: large;
 }
 #dropdownbox {
     display: flex;
@@ -96,4 +103,11 @@ body {
 }
 #mark.Incorrect {
     color: red;
+}
+#bangla_table input{
+    text-align: center;
+    font-size: x-large;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
 }
